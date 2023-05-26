@@ -42,16 +42,60 @@ if ( firtsNumber > secondNumber ){
 
 /*Sexto ejercicio
 6. Solicitar al usuario que ingrese tres números y mostrar cuál de los tres es
-el número mayor. Considerar el caso en que 2 números sean iguales.*/
+el número mayor. Considerar el caso en que 2 números sean iguales.
 
-let firtsNumber = parseInt(prompt(`Ingresa un numero`));
+let firtsNumber = parseInt(prompt(`Ingresa un numero (Solo se aceptan numeros enteros)`));
 let secondNumber = parseInt(prompt(`Ingresa otro numero`));
 let thirdNumber = parseInt(prompt(`Ingresa otro numero`));
 
-if (){
+
+if ( firtsNumber === secondNumber){
+    console.log (`El primer numero y el segundo numero son iguales`);
+} else if ( secondNumber === thirdNumber){
+    console.log (`El segundo numero y el tercer numero son iguales`);
+} else if ( thirdNumber === firtsNumber){
+    console.log (`El tercer numero y el primer numero son iguales`);
+} else if ( firtsNumber > secondNumber && firtsNumber > thirdNumber ){
     console.log (`El primer numero es mayor`);
-} else if (){
+} else if ( secondNumber > firtsNumber && secondNumber > thirdNumber ){
     console.log (`El segundo numero es mayor`);
-} else if (){
-    console.log (`El segundo numero es mayor`);
+} else if ( thirdNumber > firtsNumber && thirdNumber >secondNumber ){
+    console.log (`El tercer numero es mayor`);
 }
+*/
+
+/*Septimo ejercicio
+7. Requerir al usuario que ingrese un día de la semana e imprimir un
+mensaje si es lunes, otro mensaje diferente si es viernes, otro mensaje
+diferente si es sábado o domingo. Si el día ingresado no es ninguno de
+esos, imprimir otro mensaje.
+
+let day = prompt(`Ingrese un dia de la semana`);
+
+if ( day === `Lunes` || day === `lunes`) {
+    console.log(`El dia que selecionaste es Lunes`);
+} else if ( day === `Viernes` || day === `viernes`) {
+    console.log(`El dia que selecionaste es Viernes`);
+} else if ( day === `Sabado` || day === `sabado` || day === `Domingo` || day === `domingo`){
+    console.log(`El dia que selecionaste es Sabado o Domingo`);
+} else {
+    console.log(`El dia que seleciono no nos importa, Tenga un buen dia.`);
+}
+*/
+
+/*Octavo ejercicio
+8. Solicitar al usuario una calificación (entre 1 y 10). Luego se debe
+comprobar que el número efectivamente esté en ese rango, si no lo está
+imprima un mensaje de error. Si lo está, imprima “reprobado” si la
+calificación es inferior a 6, “regular” si está entre 6 y 8, “bien” si es 9, y por
+último, “excelente” si es 10.
+
+let note = parseFloat(prompt(`Ingrese su calificación (Esta debera de estar entre 1 o 10)`));
+
+if ( note <= 1 && note <= 10){
+
+} else {
+    console.log(``)
+}
+*/
+
