@@ -92,10 +92,58 @@ calificación es inferior a 6, “regular” si está entre 6 y 8, “bien” si
 
 let note = parseFloat(prompt(`Ingrese su calificación (Esta debera de estar entre 1 o 10)`));
 
-if ( note <= 1 && note <= 10){
+if ( note >= 1 && note <= 10){
+    if ( note <= 5 ){
+        console.log(`Reprobado`);
+    } else if ( note >= 6 && note <= 8 ){
+        console.log(`Regular`);
+    } else if ( note === 9 ){
+        console.log(`Bien`);
+    } else if ( note === 10 ){
+        console.log(`Excelente`);
+    }
 
 } else {
-    console.log(``)
+    console.error(`Datos ingresados incorrectos`);
+}
+
+*/
+
+
+/*Noveno ejercicio
+9. Escribe un programa que responda a un usuario que quiere comprar un
+helado en una conocida marca de comida rápida cuánto le costará en
+función del topping que elija.
+● El helado sin topping cuesta 50 MXN.
+● El topping de oreo cuesta 10 MXN.
+● El topping de KitKat cuesta 15 MXN.
+● El topping de brownie cuesta 20 MXN.
+En caso de no disponer del topping solicitado por el usuario, el programa
+le indicará “no tenemos este topping, lo sentimos.” y a continuación le
+informará el precio del helado sin ningún topping.
+
+let topping = prompt(`¿Qué topping desea agregar?`);
+let oreo = 10;
+let kitkat = 15;
+let brownie = 20;
+let iceCream = 50;
+let price
+
+topping = topping.toLowerCase();
+
+if ( topping == `oreo` || topping == `kitkat` || topping == `brownie`){
+    if ( topping == `oreo`){
+        price = oreo + iceCream;
+        console.log(`El helado con topping de oreo tiene un valor de: ${price} MXN`);
+    } else if ( topping == `kitkat`){
+        price = kitkat + iceCream;
+        console.log(`El helado con topping de kitkat tiene un valor de: ${price}mx`);
+    } else if ( topping == `brownie`){
+        price = brownie + iceCream;
+        console.log(`El helado con topping de brownie tiene un valor de: ${price} MXN`);
+    }
+} else {
+    console.log(`No tenemos este topping, lo sentimos. El helado tiene un valor de:  ${iceCream} MXN`);
 }
 */
 
