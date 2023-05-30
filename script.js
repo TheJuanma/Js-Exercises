@@ -147,3 +147,98 @@ if ( topping == `oreo` || topping == `kitkat` || topping == `brownie`){
 }
 */
 
+
+/*
+10. Un conocido portal de educación en tecnología está ofreciendo
+programas para aprender a desarrollar aplicaciones. Escribe un programa
+que le indique a la persona interesada cuánto deberá pagar
+mensualmente de acuerdo a la opción elegida.
+El programa educativo contempla 3 diferentes niveles, cada uno con su
+costo mensual:
+● Course: $4999 MXN
+● Carrera $3999 MXN
+● Master: $2999 MXN
+Adicionalmente preguntar si cuenta con alguna beca y aplicar el
+descuento correspondiente al precio final.
+● Beca Facebook: 20% de descuento.
+● Beca Google: 15% de descuento.
+● Beca Jesua: 50% de descuento.
+Finalmente, además del precio mensual con descuento, indicar al usuario
+cuánto gastaría en total por el curso elegido, tomando en cuenta las
+siguientes duraciones:
+● Course: 2 meses
+● Carrera 6 meses
+● Master: 12 meses
+*/ 
+
+let level = prompt(`Te damos la bienvenida al programa educativo de programacion Full Stack, a continuación escribir el nivel deseado`);
+let scholarship;
+let priceCourse = 4999;
+let priceCarrera = 3999;
+let priceMaster = 2999;
+let timeCourse = 2;
+let timeCarrera =  6;
+let timeMaster = 12;
+
+
+level = level.toLowerCase();
+
+if ( level === `course` ){
+    console.log(`Excentenle escogiste la opción Course, tiene un valor de: $4999 MXN `);
+    let scholarship = prompt(`¿Cuentas con alguna Beca?`);
+
+    scholarship = scholarship.toLowerCase();
+
+    if ( scholarship === `facebook` ){
+        console.log(`Cuentas con una beca Facebook que te hace un descuento del 20%`);
+        console.log(`El precio mensual con el descuento seria: ${Math.round(priceCourse * 0.8)} MXN`);
+        console.log(`La duración del curso son 2 meses entonces el pago total seria: ${Math.round(priceCourse * 0.8)*2} MXN`);
+    } else if ( scholarship === `google` ){
+        console.log(`Cuentas con una beca Google que te hace un descuento del 15%`);
+        console.log(`El precio mensual con el descuento seria: ${Math.round(priceCourse * 0.85)} MXN`);
+        console.log(`La duración del curso son 2 meses entonces el pago total seria: ${Math.round(priceCourse * 0.85)*2} MXN`);
+    } else if ( scholarship === `jesua` ){
+        console.log(`Cuentas con una beca Jesua que te hace un descuento del 50%`);
+        console.log(`El precio mensual con el descuento seria: ${Math.round(priceCourse * 0.5)} MXN`);
+        console.log(`La duración del curso son 2 meses entonces el pago total seria: ${Math.round(priceCourse * 0.5)*2} MXN`);
+    }
+    
+} else if ( level === `carrera` ){
+    console.log(`Excentenle escogiste la opción Carrera, tiene un valor de: 3999 MXN`);
+    let scholarship = prompt(`¿Cuentas con alguna Beca?`);
+    scholarship = scholarship.toLowerCase();
+
+    if ( scholarship === `facebook` ){
+        console.log(`Cuentas con una beca Facebook que te hace un descuento del 20%`);
+        console.log(`El precio mensual con el descuento seria: ${Math.round(priceCarrera * 0.8)} MXN`);
+        console.log(`La duración del curso son 6 meses entonces el pago total seria: ${Math.round(priceCarrera * 0.8)*6} MXN`);
+    } else if ( scholarship === `google` ){
+        console.log(`Cuentas con una beca Google que te hace un descuento del 15%`);
+        console.log(`El precio mensual con el descuento seria: ${Math.round(priceCarrera * 0.85)} MXN`);
+        console.log(`La duración del curso son 6 meses entonces el pago total seria: ${Math.round(priceCarrera * 0.85)*6} MXN`);
+    } else if ( scholarship === `jesua` ){
+        console.log(`Cuentas con una beca Jesua que te hace un descuento del 50%`);
+        console.log(`El precio mensual con el descuento seria: ${Math.round(priceCarrera * 0.5)} MXN`);
+        console.log(`La duración del curso son 6 meses entonces el pago total seria: ${Math.round(priceCarrera * 0.5)*6} MXN`);
+    }
+
+} else if ( level === `master` ){
+    console.log(`Excentenle escogiste la opción Master, tiene un valor de: $2999 MXN`);
+    let scholarship = prompt(`¿Cuentas con alguna Beca?`);
+
+    scholarship = scholarship.toLowerCase();
+
+    if ( scholarship === `facebook` ){
+        console.log(`Cuentas con una beca Facebook que te hace un descuento del 20%`);
+        console.log(`El precio mensual con el descuento seria: ${Math.round(priceMaster * 0.8)} MXN`);
+        console.log(`La duración del curso son 12 meses entonces el pago total seria: ${Math.round(priceMaster * 0.8)*12} MXN`);
+    } else if ( scholarship === `google` ){
+        console.log(`Cuentas con una beca Google que te hace un descuento del 15%`);
+        console.log(`El precio mensual con el descuento seria: ${Math.round(priceMaster * 0.85)} MXN`);
+        console.log(`La duración del curso son 12 meses entonces el pago total seria: ${Math.round(priceMaster * 0.85)*12} MXN`);
+    } else if ( scholarship === `jesua` ){
+        console.log(`Cuentas con una beca Jesua que te hace un descuento del 50%`);
+        console.log(`El precio mensual con el descuento seria: ${Math.round(priceMaster * 0.5)} MXN`);
+        console.log(`La duración del curso son 12 meses entonces el pago total seria: ${Math.round(priceMaster * 0.5)*12} MXN`);
+    }
+}
