@@ -169,7 +169,7 @@ siguientes duraciones:
 ● Course: 2 meses
 ● Carrera 6 meses
 ● Master: 12 meses
-*/ 
+
 
 let level = prompt(`Te damos la bienvenida al programa educativo de programacion Full Stack, a continuación escribir el nivel deseado`);
 let scholarship;
@@ -242,3 +242,45 @@ if ( level === `course` ){
         console.log(`La duración del curso son 12 meses entonces el pago total seria: ${Math.round(priceMaster * 0.5)*12} MXN`);
     }
 }
+*/
+
+
+/*
+11.Realizar un programa que ayude a calcular el total a pagar de acuerdo a la
+distancia recorrida por un vehículo con cargo extra por los litros
+consumidos, tomando en consideración lo siguiente:
+Si el vehículo es “coche”, el precio kilometro ha de ser 0.20, si es “moto”
+ha de ser 0.10 y si es “autobús” 0.5.
+Si los litros consumidos están entre 0 y 100 se ha de añadir 5 al costo
+total, si es mayor la cantidad de litros consumidos se ha de añadir 10 al
+total. Considere qué:
+total a pagar = (precio kilometro x kms recorridos) + extra por litros
+consumidos.
+
+
+let vehicle = prompt(`Ingrese el vehiculo que maneja (Carro, Moto, Autobus)`);
+let lt = parseInt(prompt(`¿Cuantos litros de combustible gasto?`));
+
+vehicle = vehicle.toLowerCase();
+ 
+if ( vehicle === `carro` ){
+    if ( lt >= 0 && lt <= 100 ){
+        console.log(`El total a pagar es: ${(0.20 * lt) + 5} MXN`);
+    } else if ( lt >= 101){
+        console.log(`El total a pagar es: ${(0.20 * lt) + 10} MXN`);
+    }
+} else if ( vehicle === `moto` ){
+    if ( lt >= 0 && lt <= 100 ){
+        console.log(`El total a pagar es: ${(0.1 * lt) + 5} MXN`);
+    } else if ( lt >= 101){
+        console.log(`El total a pagar es: ${(0.1 * lt) + 10} MXN`);
+    }
+} else if ( vehicle === `autobus` ){
+    if ( lt >= 0 && lt <= 100 ){
+        console.log(`El total a pagar es: ${(0.50 * lt) + 5} MXN`);
+    } else if ( lt >= 101){
+        console.log(`El total a pagar es: ${(0.50 * lt) + 10} MXN`);
+    }
+}
+*/
+
